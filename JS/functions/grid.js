@@ -1,4 +1,4 @@
-/**La funzione crea una griglia quadrata di 100 caselle numerate
+/**La funzione crea una griglia quadrata di 100 caselle numerate, premendo le caselle cambieranno di colore e manderanno il numero assegnato in console.
  * 
  */
 function myGrid() {
@@ -17,6 +17,15 @@ function myGrid() {
         quadratoCento.innerHTML = `${i}`
 
         grigliaQuadrata.appendChild(quadratoCento)
+
+
+        quadratoCento.addEventListener("click", function(){
+
+            console.log(`${i}`)
+
+            this.classList.toggle("blue-sky")
+
+        } )
 
     }
 
