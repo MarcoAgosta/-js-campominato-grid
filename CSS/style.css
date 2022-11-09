@@ -1,5 +1,5 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.quadrato-100{
+    flex-basis: 10%;
+    border: 1px solid black;
+    aspect-ratio: 1/1;
 }
