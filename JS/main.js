@@ -1,12 +1,31 @@
-const griglia = document.getElementById("griglia")
-const btnPrimary = document.getElementById("pulsante-principale")
+const griglia = document.getElementById("griglia");
+const btnPrimary = document.getElementById("pulsante-principale");
+
 
 btnPrimary.addEventListener ("click", function(){
 
-    griglia.innerHTML = ""
+    const selectValue = document.getElementById("difficoltà").value;
 
-    const grigliaCento = myGrid()
-    
-    griglia.appendChild(grigliaCento)
+    griglia.innerHTML = "";
+
+    if (parseInt(selectValue) === 100){
+
+        const grigliaCento = centoGrid();
+        
+        griglia.appendChild(grigliaCento);
+
+    } else if (parseInt(selectValue) === 81){
+
+        const grigliaOttantuno = ottantunoGrid();
+
+        griglia.appendChild(grigliaOttantuno);
+
+    } else if (parseInt(selectValue) === 49){
+
+        const grigliaQuarantanove = quarantanoveGrid();
+
+        griglia.appendChild(grigliaQuarantanove);
+            
+    }
 
 } )
